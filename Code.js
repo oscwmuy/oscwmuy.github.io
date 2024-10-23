@@ -5,9 +5,9 @@ let isPlay = true
 
 function changeImage() {
   if (!audio.paused) {
-    image.src = 'Media/icon-yes-sound.png'
+    image.src = 'media/icon-yes-sound.png'
   } else {
-    image.src = 'Media/icon-no-sound.png'
+    image.src = 'media/icon-no-sound.png'
   }
 }
 
