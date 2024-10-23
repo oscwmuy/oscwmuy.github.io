@@ -32,12 +32,3 @@ function toggleSound() {
 }
 
 image.addEventListener('click', toggleSound)
-
-const autoplayvideo = function () {
-  if (isPlay) {
-    video.play()
-    isPlay = false
-  }
-}
-
-document.addEventListener('click', autoplayvideo)
