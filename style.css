@@ -3,6 +3,7 @@
 html {
     scrollbar-color: #db1414 #1a1b1c;
     scrollbar-width: auto;
+    overflow-x:hidden;
   }
 
 body {
