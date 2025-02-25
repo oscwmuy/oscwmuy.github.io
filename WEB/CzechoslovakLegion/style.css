@@ -1,0 +1,320 @@
+/* основные элементы сайта */
+
+html {
+    scrollbar-color: #db1414 #1a1b1c;
+    scrollbar-width: auto;
+  }
+
+body {
+    font-family: "Oswald", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #1a1b1c;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: clamp(1.063rem, 0.857rem + 1.03vw, 2.5rem);
+}
+
+p {
+    /* margin: 17px; */
+    color: #bdbdbd;
+    font-size: clamp(0.313rem, 0.179rem + 0.67vw, 1.25rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* видео */
+
+.move {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.move video {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 10;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+    
+.videoContent {
+    z-index: 2;
+    text-align: center;
+    color: #960000;
+    -webkit-text-stroke: 0.5px #000 ;
+}
+
+
+/* аудио фон */
+
+#music {
+    position: fixed;
+    z-index: 100;
+    margin: 10px;
+}
+
+
+/* фото */
+
+#poster{
+    text-align: center;
+    padding: 74px 74px;
+    background-color: #000;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#poster img{
+    max-width: 40%;
+    margin: 4px;
+}
+
+#poster h1 {
+    align-self: center;
+}
+
+.first {
+    transform: rotate(-90deg);
+    color: #960000;
+}
+
+.second {
+    transform: rotate(+90deg);
+    color: #101873;
+}
+
+.three {
+    transform: rotate(-90deg);
+    color: #fff;
+}
+
+.events {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    border: 1px;
+    border-color: #960000;
+}
+
+.events p {
+    color: #bdbdbd;
+    text-align: center;
+    align-self: center;
+    max-width: 400px;
+}
+
+.events img {
+    width: 47%;
+}
+
+
+/* интерактивная карта */
+
+.interactive {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.map h1{
+    color: white;
+    background-color: #252525;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px;
+
+}
+
+.interactive img{
+    height: 100%;
+    width: 100%;
+}
+
+.interactive svg{
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.point {
+    fill: #992222;
+    stroke: black;
+    stroke-width: 4;
+    animation: LightPoint 1400ms linear infinite;
+}
+
+@keyframes LightPoint {
+    0% {
+      stroke: red;
+    }
+    50% {
+      stroke: white;
+    }
+    100% {
+      stroke: red;
+    }
+  }
+
+.description{
+    position: absolute;
+    padding: 17px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 400px;
+    z-index: 2;
+}
+
+
+/* блок с памятниками чехословакам */
+
+.slider {
+    width: 74vw;
+    max-height: 74vh;
+    overflow: hidden;
+    border: 10px solid #000000;
+}
+
+.middle {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    height: 8px;
+    width: 30px;
+    margin: 7px;
+    cursor: pointer;
+    background-color: #db1414;
+    border: solid 4px;
+    border-color: #000;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+.bar:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all .7s ease;
+}
+
+.slide img {
+    max-width: 100%;
+}
+
+.slide p {
+    overflow: visible;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+.statistics{
+    color: #bdbdbd;
+    text-align: center;
+    
+}
+
+.statistics img{
+    max-width: 47%;
+}
+
+.statistics h1 {
+    color: white;
+}
+
+
+/* дно сайта */
+
+.dno {
+    padding: 25px;
+    background-color: #252525;
+    margin-bottom: 0;
+}
+
+.dno h1 {
+    margin: 0;
+    text-align: center;
+    color: #707070;
+}
+
+.dno p {
+    margin: 0;
+    text-align: center;
+    color: #707070;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a {
+    display: inline;
+    align-items: center;
+}
+
+.links img {
+    max-width: 47px;
+    text-align: center;
+} 
+
